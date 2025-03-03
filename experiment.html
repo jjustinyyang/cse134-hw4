@@ -19,6 +19,14 @@
         <input type="search" id="search" name="search">
         <button type="submit">Go</button>
     </search>
+    <noscript>
+        Dark mode not supported, JavaScript is disabled!
+        <style>
+            #toggle {
+            display: none;
+            }
+        </style>
+    </noscript>
     <header>
         <nav>
             <a href="index.html">About Me</a>
@@ -27,6 +35,7 @@
             <a href="honors.html">Honors/Awards</a>
             <a href="hobbies.html">Hobbies/Interests</a>
             <a href="experiment.html">Experiment Page</a>
+            <button id="toggle">🌙</button>
         </nav>
     </header>
     <hr>
@@ -188,11 +197,13 @@
                 </tr>
             </tbody>
         </table>
+        <a href="contact-form.html" id="contact-form-link">Contact Form</a>
         <address>
             <p>San Dieog, CA</p>
         </address>
         <a href="docs/justin_yang_resume.pdf" target="_blank">Resume</a>
     </footer>
+    <script src="toggle-mode.js"></script>
 </body>
 
 </html>

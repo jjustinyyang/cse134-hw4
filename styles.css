@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* =================== DARK MODE =================== */
+.darkMode {
+    background: gray !important;
+    color: white !important;
+}
+
+.darkModeInner {
+    background: darkgray !important;
+    color: black !important;
+}
+
 /* =================== CSS VARIABLES =================== */
 :root {
     --primary-color: #005a8d;
@@ -33,7 +44,7 @@ body {
 
 /* =================== HEADER & NAVIGATION =================== */
 #site-header {
-    background-color: var(--primary-color, #005a8d);
+    background-color: var(--primary-color, #005a8d) !important;
     padding: 15px 0;
     text-align: center;
 }
@@ -57,6 +68,12 @@ body {
     border-radius: 5px;
 }
 
+#toggle {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #005a8d !important;
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
@@ -75,7 +92,7 @@ body {
 }
 
 /* Profile Section */
-.profile-container {
+#profile-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -492,12 +509,87 @@ body {
     background-color: var(--secondary-color, #4aabff);
 }
 
+/* =================== CONTACT FORM =================== */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    background: #ddd;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#contact-form label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color, #005a8d) !important;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family, Arial);
+}
+
+#contact-form .required-indicator {
+    color: red;
+    margin-left: 5px;
+}
+
+#contact-form .error-message,
+#contact-form .info-message {
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: var(--font-family, Arial);
+}
+
+#contact-form .error-message {
+    color: red;
+}
+
+#contact-form .info-message {
+    color: green;
+}
+
+#contact-form .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#contact-form .form-actions button {
+    padding: 10px 20px;
+    background-color: var(--primary-color, #005a8d) !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--font-family, Arial);
+}
+
+#contact-form .form-actions button:hover {
+    background-color: var(--secondary-color, #4aabff);
+}
+
 /* =================== FOOTER =================== */
 
 #site-footer {
     text-align: center;
     padding: 20px;
-    background: #999;
+    background: #005a8d !important;
     color: #fff;
 }
 
